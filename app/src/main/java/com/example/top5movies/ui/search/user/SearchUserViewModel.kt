@@ -20,6 +20,7 @@ import kotlin.time.Duration.Companion.milliseconds
 
 data class SearchUserUIState(
     val users: List<Account> = emptyList(),
+    val activeAccount: Account? = null,
     val activeFeed: List<Top5>? = null
 )
 
@@ -51,12 +52,18 @@ class SearchUserViewModel @Inject constructor(
         viewModelScope.launch {
             val result = repo.getAccountFeed(account)
             val feed = result.getOrNull().orEmpty()
-            _state.value = _state.value.copy(activeFeed = feed)
+            _state.value = _state.value.copy(
+                activeAccount = account,
+                activeFeed = feed
+            )
         }
     }
 
     fun closeFeed() {
-        _state.value = _state.value.copy(activeFeed = null)
+        _state.value = _state.value.copy(
+            activeAccount = null,
+            activeFeed = null
+        )
     }
 
     private suspend fun getUsersByFilter(filter: String): List<Account> {

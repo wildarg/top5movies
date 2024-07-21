@@ -25,10 +25,12 @@ fun SearchUserScreen(
         onAccountClick = vm::openAccountFeed
     )
 
-    if (state.activeFeed != null)
+    val account = state.activeAccount
+    val feed = state.activeFeed
+    if (feed != null && account != null)
         AccountFeedDialog(
-            account = Account("wild@gmail.com"),
-            feed = state.activeFeed.orEmpty(),
+            account = account,
+            feed = feed,
             onDismissRequest = vm::closeFeed
         )
 }
