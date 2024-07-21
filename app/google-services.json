@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "740092062389",
+    "project_id": "wild-arg",
+    "storage_bucket": "wild-arg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740092062389:android:5a1c7f8e76ad38cb816cfc",
+        "android_client_info": {
+          "package_name": "com.example.top5movies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740092062389-2d4rgo31bth17ijttob83e8ghkj8au15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEWX29V0C7XJUkpvDYanTPLP52PdEqwzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740092062389-2d4rgo31bth17ijttob83e8ghkj8au15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
